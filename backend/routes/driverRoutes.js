@@ -1,0 +1,18 @@
+import express from 'express';
+import { getDrivers, getAvailableDrivers, getDriverById, createDriver, updateDriver, deleteDriver } from '../controllers/driverController.js';
+import { protect, admin } from '../middleware/authMiddleware.js';
+
+const router = express.Router();
+
+router.route('/')
+  .get(getDrivers)
+  .post(protect, admin, createDriver);
+
+router.get('/available', getAvailableDrivers);
+
+router.route('/:id')
+  .get(getDriverById)
+  .put(protect, admin, updateDriver)
+  .delete(protect, admin, deleteDriver);
+
+export default router;
