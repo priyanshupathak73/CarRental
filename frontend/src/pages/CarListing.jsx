@@ -77,7 +77,7 @@ const CarListing = () => {
                 )}
               </div>
               
-              <div className="p-6 flex-grow flex flex-col">
+              <div className="p-6 grow flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{car.name}</h3>

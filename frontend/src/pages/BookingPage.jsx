@@ -137,7 +137,7 @@ const BookingPage = () => {
                     if (!e.target.checked) setSelectedDriverId(null);
                   }}
                 />
-                <div className="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
+                <div className="w-14 h-7 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-blue-600"></div>
                 <span className="ml-3 text-lg font-medium text-gray-900">
                   Yes, add a driver (+₹{driverChargePerDay}/day)
                 </span>
@@ -158,7 +158,7 @@ const BookingPage = () => {
                         className={`flex items-center p-4 rounded-xl cursor-pointer transition ${selectedDriverId === driver._id ? 'bg-blue-600 text-white shadow-md' : 'bg-white hover:bg-gray-50 border border-gray-200'}`}
                       >
                         <img src={driver.photo || 'https://via.placeholder.com/150'} alt={driver.name} className="w-16 h-16 rounded-full object-cover mr-4" />
-                        <div className="flex-grow">
+                        <div className="grow">
                           <h4 className="font-bold text-lg">{driver.name}</h4>
                           <div className={`text-sm flex items-center mt-1 space-x-3 ${selectedDriverId === driver._id ? 'text-blue-100' : 'text-gray-500'}`}>
                             <span>★ {driver.rating}/5</span>

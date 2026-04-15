@@ -38,7 +38,7 @@ const CarDetails = () => {
               animate={{ scale: 1, opacity: 1 }}
               src={car.image} 
               alt={car.name} 
-              className="w-full h-auto object-cover max-h-[500px]"
+              className="w-full h-auto object-cover max-h-125"
             />
           </div>
 
